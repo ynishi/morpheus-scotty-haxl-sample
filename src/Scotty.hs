@@ -23,7 +23,7 @@ scottyServer = do
   startServer wsApp (httpApp)
   where
     httpApp = do
-      Haxl.httpEndpoint "/haxl" Haxl.app
+      Haxl.httpEndpoint "/" Haxl.app
     wsApp :: ServerApp
     wsApp pending = do
       conn <- acceptRequest pending
