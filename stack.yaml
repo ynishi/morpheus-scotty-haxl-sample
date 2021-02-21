@@ -54,13 +54,6 @@ extra-deps:
 - type-aligned-0.9.6@sha256:2517994f5ce77cb8f3c30b33d403a90d36665d3f7ac668241f37a9f11b20db16,1075
 
 
-  #- morpheus-graphql-0.16.0
-  #- git: https://github.com/morpheusgraphql/morpheus-graphql.git 
-  #commit: c4afa1d285d16d517e3e58f00e301647bf663d9c
-  #subdirs:
-  #- morpheus-graphql-app
-  #- morpheus-graphql-core
-
 # Override default flag values for local packages and extra-deps
 # flags: {}
 
