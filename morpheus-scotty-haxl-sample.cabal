@@ -1,0 +1,135 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 20e68983b51675b970b63d6f876608e52f1d10698960395b6a04ef608b14c676
+
+name:           morpheus-scotty-haxl-sample
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/ynishi/morpheus-scotty-haxl-sample#readme>
+homepage:       https://github.com/ynishi/morpheus-scotty-haxl-sample#readme
+bug-reports:    https://github.com/ynishi/morpheus-scotty-haxl-sample/issues
+author:         Yutaka Nishimura
+maintainer:     ytk.nishimura@gmail.com
+copyright:      2021 Yutaka Nishimura
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/ynishi/morpheus-scotty-haxl-sample
+
+library
+  exposed-modules:
+      API
+      DataSource
+      Schema
+      Scotty
+      Server.Utils
+  other-modules:
+      Paths_morpheus_scotty_haxl_sample
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson >=1.4.4.0 && <=1.6
+    , base >=4.7 && <5
+    , bytestring >=0.10.4 && <0.11
+    , containers >=0.4.2.1 && <0.7
+    , extra
+    , fraxl
+    , hashable
+    , haxl
+    , http-types
+    , morpheus-graphql >=0.16.0
+    , morpheus-graphql-app
+    , morpheus-graphql-client >=0.16.0
+    , morpheus-graphql-core >=0.16.0
+    , morpheus-graphql-subscriptions >=0.16.0
+    , mtl >=2.0 && <=2.3
+    , req
+    , scotty
+    , stm
+    , text >=1.2.3.0 && <1.3
+    , transformers
+    , wai
+    , wai-websockets >=1.0 && <=3.5
+    , warp
+    , websockets >=0.11.0 && <=0.13
+  default-language: Haskell2010
+
+executable morpheus-scotty-haxl-sample-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_morpheus_scotty_haxl_sample
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson >=1.4.4.0 && <=1.6
+    , base >=4.7 && <5
+    , bytestring >=0.10.4 && <0.11
+    , containers >=0.4.2.1 && <0.7
+    , extra
+    , fraxl
+    , hashable
+    , haxl
+    , http-types
+    , morpheus-graphql >=0.16.0
+    , morpheus-graphql-app
+    , morpheus-graphql-client >=0.16.0
+    , morpheus-graphql-core >=0.16.0
+    , morpheus-graphql-subscriptions >=0.16.0
+    , morpheus-scotty-haxl-sample
+    , mtl >=2.0 && <=2.3
+    , req
+    , scotty
+    , stm
+    , text >=1.2.3.0 && <1.3
+    , transformers
+    , wai
+    , wai-websockets >=1.0 && <=3.5
+    , warp
+    , websockets >=0.11.0 && <=0.13
+  default-language: Haskell2010
+
+test-suite morpheus-scotty-haxl-sample-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_morpheus_scotty_haxl_sample
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson >=1.4.4.0 && <=1.6
+    , base >=4.7 && <5
+    , bytestring >=0.10.4 && <0.11
+    , containers >=0.4.2.1 && <0.7
+    , extra
+    , fraxl
+    , hashable
+    , haxl
+    , http-types
+    , morpheus-graphql >=0.16.0
+    , morpheus-graphql-app
+    , morpheus-graphql-client >=0.16.0
+    , morpheus-graphql-core >=0.16.0
+    , morpheus-graphql-subscriptions >=0.16.0
+    , morpheus-scotty-haxl-sample
+    , mtl >=2.0 && <=2.3
+    , req
+    , scotty
+    , stm
+    , text >=1.2.3.0 && <1.3
+    , transformers
+    , wai
+    , wai-websockets >=1.0 && <=3.5
+    , warp
+    , websockets >=0.11.0 && <=0.13
+  default-language: Haskell2010

@@ -1,0 +1,71 @@
+name:                morpheus-scotty-haxl-sample
+version:             0.1.0.0
+github:              "ynishi/morpheus-scotty-haxl-sample"
+license:             BSD3
+author:              "Yutaka Nishimura"
+maintainer:          "ytk.nishimura@gmail.com"
+copyright:           "2021 Yutaka Nishimura"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/ynishi/morpheus-scotty-haxl-sample#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson                           >= 1.4.4.0   && <= 1.6
+- bytestring                      >= 0.10.4    && <  0.11
+- text                            >= 1.2.3.0   && <  1.3
+- containers                      >= 0.4.2.1   && <  0.7
+- hashable
+- haxl
+- mtl                             >= 2.0       && <= 2.3
+- websockets                      >= 0.11.0    &&  <= 0.13
+- morpheus-graphql                >= 0.16.0
+- morpheus-graphql-app
+- morpheus-graphql-client         >= 0.16.0
+- morpheus-graphql-core           >= 0.16.0
+- morpheus-graphql-subscriptions  >= 0.16.0
+- wai-websockets                  >= 1.0       &&  <= 3.5
+- scotty
+- wai
+- warp
+- req
+- transformers
+- extra
+- http-types
+- stm
+- fraxl
+
+library:
+  source-dirs: src
+
+executables:
+  morpheus-scotty-haxl-sample-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - morpheus-scotty-haxl-sample
+
+tests:
+  morpheus-scotty-haxl-sample-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - morpheus-scotty-haxl-sample

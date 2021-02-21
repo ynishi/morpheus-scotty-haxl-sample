@@ -1,0 +1,3 @@
+[submodule "lib/morpheus-graphql"]
+	path = lib/morpheus-graphql
+	url = https://github.com/morpheusgraphql/morpheus-graphql.git
