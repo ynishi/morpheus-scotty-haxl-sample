@@ -20,11 +20,11 @@ import Web.Scotty (ScottyM)
 
 scottyServer :: IO ()
 scottyServer = do
-  startServer wsApp (httpApp)
+  startServer mockWsApp (httpApp)
   where
     httpApp = do
       Haxl.httpEndpoint "/" Haxl.app
-    wsApp :: ServerApp
-    wsApp pending = do
+    mockWsApp :: ServerApp
+    mockWsApp pending = do
       conn <- acceptRequest pending
       sendTextData conn ("ws" :: Text)
